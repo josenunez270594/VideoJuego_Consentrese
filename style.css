@@ -1,0 +1,86 @@
+/* Estilos generales */
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%);
+    color: #333;
+}
+
+.game-container {
+    text-align: center;
+}
+
+h1 {
+    font-size: 36px;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+}
+
+/* Tablero de juego */
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(4, 150px);
+    gap: 15px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Cartas del juego */
+.card {
+    width: 150px;
+    height: 150px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    border: 2px solid transparent;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Imagen dentro de la carta */
+.card img {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    display: none;
+}
+
+.card.flipped img {
+    display: block;
+}
+
+/* Cartas que hacen match */
+.card.matched {
+    background-color: #66ff99;
+    border: 2px solid #66ff99;
+    box-shadow: 0px 4px 10px rgba(0, 255, 100, 0.3);
+    transform: scale(1.1);
+}
+
+/* Estilo del texto de estado */
+#status {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
